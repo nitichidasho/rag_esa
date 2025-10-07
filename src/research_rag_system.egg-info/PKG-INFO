@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: research-rag-system
+Version: 0.1.0
+Summary: 研究室 esa.io RAGシステム
+Author-email: Lab Member <lab@example.com>
+Requires-Dist: streamlit>=1.28.0
+Requires-Dist: fastapi>=0.104.0
+Requires-Dist: uvicorn>=0.24.0
+Requires-Dist: sqlalchemy>=2.0.0
+Requires-Dist: chromadb>=0.4.0
+Requires-Dist: transformers>=4.35.0
+Requires-Dist: sentence-transformers>=2.2.2
+Requires-Dist: torch>=2.1.0
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: pandas>=2.1.0
+Requires-Dist: beautifulsoup4>=4.12.0
+Requires-Dist: markdown>=3.5.0
+Requires-Dist: python-multipart>=0.0.6
+Requires-Dist: requests>=2.31.0
+Requires-Dist: httpx>=0.25.0
+Requires-Dist: ratelimit>=2.2.1
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: pydantic>=2.4.0
+Requires-Dist: loguru>=0.7.0
+Requires-Dist: pydantic-settings>=2.10.1
+Requires-Dist: python-dateutil>=2.9.0.post0
+Requires-Dist: protobuf>=6.31.1
+Requires-Dist: accelerate>=1.9.0
+Requires-Dist: bitsandbytes>=0.46.1
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.21.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
