@@ -141,13 +141,6 @@ response = requests.get("http://localhost:8000/api/articles/123")
 article = response.json()
 ```
 
-### 対応データ
-- **記事数**: 1,176件
-- **メンバー**: 20人
-- **検索方式**: セマンティック検索 + キーワード検索
-- **言語**: 日本語対応
-- **更新**: リアルタイム更新可能
-
 ### 設定ファイル
 環境変数での設定カスタマイズ:
 ```env
@@ -215,6 +208,27 @@ flake8 .
 - **メタデータDB**: SQLite
 - **埋め込みモデル**: sentence-transformers/all-MiniLM-L6-v2
 - **LLMモデル**: google/flan-t5-base
+
+### 使用モデルとライセンス
+
+#### LLMモデル（質問応答用）
+| モデル名 | ライセンス | 用途 |
+|---------|-----------|------|
+| weblab-GENIAC/Tanuki-8B-dpo-v1.0 | Apache 2.0 | メイン（日本語特化） |
+| google/flan-t5-base | Apache 2.0 | フォールバック |
+| google/flan-t5-large | Apache 2.0 | フォールバック |
+| microsoft/GODEL-v1_1-large-seq2seq | MIT License | フォールバック |
+| facebook/blenderbot-400M-distill | 研究・非商用 | フォールバック |
+| microsoft/DialoGPT-large | MIT License | フォールバック |
+
+#### 埋め込みモデル（ベクトル検索用）
+| モデル名 | ライセンス | 用途 |
+|---------|-----------|------|
+| sentence-transformers/all-MiniLM-L6-v2 | Apache 2.0 | メイン |
+| intfloat/multilingual-e5-base | MIT License | フォールバック |
+| sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 | Apache 2.0 | フォールバック |
+
+**注意**: 全てのモデルはHugging Face Hubから動的にダウンロードされます。モデルの重みファイルは本リポジトリには含まれていません。
 
 ## ライセンス
 
